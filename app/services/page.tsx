@@ -5,7 +5,7 @@ import { SectorsGrid } from "@/components/sections/SectorsGrid";
 import { CredentialsBar } from "@/components/sections/CredentialsBar";
 import { Badge } from "@/components/ui/badge";
 import { servicesMetadata } from "@/lib/metadata";
-import { SERVICE_CARDS, ABOUT_BODY } from "@/lib/constants";
+import { SERVICE_CARDS, SERVICES_INTRO } from "@/lib/constants";
 
 export const metadata: Metadata = servicesMetadata;
 
@@ -15,8 +15,20 @@ export default function ServicesPage() {
       <PageHero
         overline="Our Services"
         title="Expert Services. Proven Results."
-        subtitle={ABOUT_BODY[0]}
       />
+
+      {/* Services intro — full company narrative */}
+      <section className="bg-black py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl space-y-5">
+            {SERVICES_INTRO.map((para, i) => (
+              <p key={i} className="text-sm leading-relaxed text-white-dim">
+                {para}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-black-surface py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">

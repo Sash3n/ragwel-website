@@ -18,7 +18,7 @@ export default function AboutPage() {
       <section className="bg-black-surface py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <Overline>Who We Are</Overline>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <div className="mt-8 max-w-3xl space-y-6">
             {ABOUT_BODY.map((para, i) => (
               <p key={i} className="text-sm leading-relaxed text-white-dim">
                 {para}

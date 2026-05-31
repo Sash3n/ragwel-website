@@ -226,7 +226,20 @@ export const METRICS = [
 export const HERO_SUBHEADING =
   "Specialised in commercial management, contracts management, cost management, claims management, dispute avoidance and resolution services, delay analysis and forensic claims.";
 
+// ── About Us copy ──────────────────────────────────────
+export const ABOUT_INTRO =
+  "Ragwel Claims Consultants Limited is a construction claims consultancy with a business office situated in London, the centre of international dispute avoidance and resolutions. The company offers professional services to construction industry clients, contractors, subcontractors, financiers, investors, property developers and engineers in commercial, contractual, claims management, forensic construction claims, delay analysis and alternate dispute resolutions.";
+
 export const ABOUT_BODY = [
-  "Ragwel Claims Consultants Ltd. provides strategic advice and support from the start of a scheme through to project completion, including post-completion close-out reporting, audit control, and collaboration throughout the project's life cycle.",
-  "Our team has worked with clients, financiers, investors, and contractors on brownfield site development, mining, power generation, civil infrastructure, railway, highway, runway refurbishment, ports feasibility, property developments, industrial buildings, and oil and gas projects.",
+  "Ragwel Claims Consultants Limited is a construction claims consultancy with a business office situated in London, the centre of international dispute avoidance and resolutions. The company offers professional services to construction industry clients, contractors, subcontractors, financiers, investors, property developers and engineers in commercial, contractual, claims management, forensic construction claims, delay analysis and alternate dispute resolutions.",
+  "Ragwel Claims Consultants Ltd boasts of having collaboration partners with cost management software and construction software around the world, namely in Eastern and Southern Africa and the United Kingdom.",
+  "Our team members are qualified construction professionals in quantity surveying and construction law, with experience working with several forms of construction contracts in different parts of the world — mainly Eastern and Southern Africa, Europe (mostly United Kingdom) and the United Arab Emirates — on various forms of contract namely FIDIC, JBCC, JCT, GCC, NEC and UNCITRAL mediation and commercial arbitration.",
+];
+
+// ── Services page copy ─────────────────────────────────
+export const SERVICES_INTRO = [
+  "Ragwel Claims Consultants Ltd, with extensive experience in commercial, contractual, project management, claims management, and ADR for building and civil engineering projects, provides strategic advice and support from the start of a scheme through to project completion. They also handle post-completion close-out reporting, ensuring audit control and fostering collaboration throughout the project's life cycle.",
+  "The team has worked with clients, financiers, investors and contractors on brownfield site development, mining, power generation projects, civil infrastructural works, railway works, highway works, runways refurbishment, ports feasibility, property developments, industrial buildings with associated infrastructure and oil and gas projects.",
+  "Ragwel Claims Consultants Ltd team had supported clients in avoiding disputes on non-contentious matters arising out of the contracts of projects during execution, resolving disputed issues through adjudication and conciliation, with substantive claims formulation for tribunals, and for Technology and Construction Court actions, and defending clients through forensic quantity surveying in claims to recover costs.",
+  "Our team brings strong skills in claims management, quantity surveying, project management, delay analysis, dispute avoidance, resolutions and arbitration. They are registered with leading international bodies including RICS, CICES, CIArb, ICCP, the Society of Construction Law and the Adjudicators Society. With experience gained at top global engineering firms, we understand a wide range of construction contracts across different cultures and work with a strong focus on preventing disputes.",
 ];
