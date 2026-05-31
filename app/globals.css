@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode (system default = dark; light via .dark removal). */
+    --bg: #fafafa;
+    --fg: #0a0a0a;
+    --gold: #a07830;
+    --card: #ffffff;
+    --border: #e0e0e0;
+  }
+
+  .dark {
+    --bg: #0a0a0a;
+    --fg: #ffffff;
+    --gold: #bfa060;
+    --card: #141414;
+    --border: rgba(255, 255, 255, 0.06);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Focus-visible ring for accessibility (WCAG 2.1 AA). */
+  :focus-visible {
+    outline: 2px solid #bfa060;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Engineering grid-line texture overlay for hero / dark sections. */
+  .grid-texture {
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 39px,
+        rgba(255, 255, 255, 0.025) 39px,
+        rgba(255, 255, 255, 0.025) 40px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 39px,
+        rgba(255, 255, 255, 0.025) 39px,
+        rgba(255, 255, 255, 0.025) 40px
+      );
+  }
+
+  /* All-caps micro-label. */
+  .micro-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Gold overline rule placed before section headlines. */
+  .overline-rule {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background-color: #bfa060;
+    vertical-align: middle;
+  }
+}
+
+@layer utilities {
+  /* Skip-to-content link, visually hidden until focused. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #bfa060;
+    color: #0a0a0a;
+    border-radius: 8px;
+  }
+}
