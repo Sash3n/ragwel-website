@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     // System default = dark per the brief.
     <html lang="en" className={`dark ${playfair.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <a href="#main" className="skip-link">
           Skip to content
         </a>
