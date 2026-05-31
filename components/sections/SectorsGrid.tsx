@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Overline } from "@/components/ui/overline";
-import { fadeUp, staggerChildren, scrollReveal } from "@/lib/animations";
 import { SECTORS } from "@/lib/constants";
 
 export function SectorsGrid() {
@@ -14,19 +13,17 @@ export function SectorsGrid() {
           Built for Complex Projects
         </h2>
 
-        <motion.ul
-          variants={staggerChildren}
-          {...scrollReveal}
-          className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4"
-        >
-          {SECTORS.map((sector) => {
+        <ul className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {SECTORS.map((sector, i) => {
             const Icon = sector.icon;
             return (
               <motion.li
                 key={sector.label}
-                variants={fadeUp}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.3, ease: "easeOut", delay: i * 0.04 }}
                 whileHover={{ borderColor: "rgba(191,160,96,0.4)" }}
-                transition={{ duration: 0.2 }}
                 className="flex flex-col gap-3 rounded-lg border border-gold/10 bg-black p-5"
               >
                 <Icon className="h-5 w-5 text-gold" aria-hidden />
@@ -34,7 +31,7 @@ export function SectorsGrid() {
               </motion.li>
             );
           })}
-        </motion.ul>
+        </ul>
       </div>
     </section>
   );

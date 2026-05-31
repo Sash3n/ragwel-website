@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Overline } from "@/components/ui/overline";
-import { fadeUp, staggerChildren, scrollReveal } from "@/lib/animations";
 import { SERVICE_ROWS } from "@/lib/constants";
 
 export function ServicesOverview() {
@@ -25,17 +24,16 @@ export function ServicesOverview() {
           </Link>
         </div>
 
-        <motion.ul
-          variants={staggerChildren}
-          {...scrollReveal}
-          className="mt-12 border-t border-white/5"
-        >
+        <ul className="mt-12 border-t border-white/5">
           {SERVICE_ROWS.map((row) => {
             const Icon = row.icon;
             return (
               <motion.li
                 key={row.number}
-                variants={fadeUp}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
                 className="flex items-center gap-4 border-b border-white/5 py-6 md:gap-6"
               >
                 <span className="font-heading text-lg text-white/40 md:text-xl">
@@ -51,7 +49,7 @@ export function ServicesOverview() {
               </motion.li>
             );
           })}
-        </motion.ul>
+        </ul>
       </div>
     </section>
   );
