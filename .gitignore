@@ -27,3 +27,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# project spec
+website_prompt.md
