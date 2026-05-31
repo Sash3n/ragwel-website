@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     // System default = dark per the brief.
-    <html lang="en" className={`dark ${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`dark ${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased" suppressHydrationWarning>
         <a href="#main" className="skip-link">
           Skip to content
