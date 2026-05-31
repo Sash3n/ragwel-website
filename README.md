@@ -30,7 +30,7 @@ Premium, fully responsive marketing website for **Ragwel Claims Consultants Ltd.
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | Next.js 15 (App Router) |
+| Framework | Next.js 16 (App Router) |
 | Language | TypeScript (strict) |
 | Styling | Tailwind CSS v3 |
 | Animation | Framer Motion |
@@ -181,18 +181,6 @@ git merge --no-ff dev -m "release: v<x.y.z> — <description>"
 git tag -a v<x.y.z> -m "Release v<x.y.z>"
 git push origin main --tags
 ```
-
----
-
-## Contact
-
-| | |
-|-|--|
-| Email | joseph@ragwelcc.com |
-| Email | raguelcc@gmail.com |
-| Phone | +44 7857 710600 |
-| London | United Kingdom |
-| Midrand | South Africa |
 
 ---
 
