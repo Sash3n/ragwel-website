@@ -80,6 +80,23 @@
   }
 }
 
+@layer components {
+  /* Above-the-fold hero entrance — CSS-only so content is visible before JS. */
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-animate {
+    animation: heroFadeUp 0.4s ease-out both;
+  }
+  .hero-delay-1 { animation-delay: 0.05s; }
+  .hero-delay-2 { animation-delay: 0.13s; }
+  .hero-delay-3 { animation-delay: 0.21s; }
+  .hero-delay-4 { animation-delay: 0.29s; }
+  .hero-delay-5 { animation-delay: 0.37s; }
+}
+
 @layer utilities {
   /* Skip-to-content link, visually hidden until focused. */
   .skip-link {
